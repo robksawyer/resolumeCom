@@ -1,5 +1,8 @@
-# resolumeCom Extended Version
+# Flash resolumeCom Extended Version
 > The changes made should make coding Flash interop simpler, more flexible, and (if handled properly) slightly faster. It also increases the legibility of your code.
+
+## Contributors
+The initial extended code base was provided by the Resolume forum user Conduit. See the post <http://resolume.com/forum/viewtopic.php?f=14&t=11035&p=43877&hilit=flash#p43877> for more details.
 
 ## Main
 Fully backwards-compatible (afaik - let me know if you run into any issues)
