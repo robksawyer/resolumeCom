@@ -25,3 +25,15 @@ Several functions have been changed to check variable types at run-time. It's un
 
 - All the Parameter subclasses' functions are now inherited from the Parameter class (thanks to run-time typing)
 - The p_source property of the ChangeEvent class is now a Parameter, not an Object
+
+Please note that the latest revision is not backwards compatible. It does, however, strip all the slow parts from the package. You should see noticeable framerate difference in your ActionScript-heavy Flash animations.
+
+This version removes event listeners entirely, relying on embedded properties to retrieve values for the parameters. When a parameter is added to the Resolume class, its name is added to the class as a property - for example:
+
+```
+var resolume:Resolume = new Resolume();    //create resolume instance
+resolume.addFloatParameter('foo', 0);      //add float parameter 'foo'
+resolume.addStringParameter('bar', '');    //add string parameter 'bar'
+resolume.foo;                              //call the current value of 'foo'
+resolume.bar                               //call the current value of 'bar'
+```
